@@ -5,22 +5,22 @@ import { FaCode, FaDatabase, FaTools, FaReact, FaBrain, FaPython, FaCog, FaGitAl
 export default function Skills() {
   const skills = [
     // Core Programming Languages
-    { name: "Python", proficiency: 90, color: "from-blue-600 to-gray-800" },
-    { name: "JavaScript", proficiency: 88, color: "from-blue-600 to-gray-800" },
-    { name: "C/C++", proficiency: 85, color: "from-blue-600 to-gray-800" },
-    { name: "HTML/CSS", proficiency: 90, color: "from-blue-600 to-gray-800" },
+    { name: "Python", proficiency: 84, color: "from-blue-600 to-gray-800" },
+    { name: "JavaScript", proficiency: 82, color: "from-blue-600 to-gray-800" },
+    { name: "C/C++", proficiency: 80, color: "from-blue-600 to-gray-800" },
+    { name: "HTML/CSS", proficiency: 83, color: "from-blue-600 to-gray-800" },
     
     // Key Technologies
-    { name: "Flask", proficiency: 85, color: "from-blue-600 to-gray-800" },
-    { name: "SQLite", proficiency: 82, color: "from-blue-600 to-gray-800" },
-    { name: "Git", proficiency: 88, color: "from-blue-600 to-gray-800" },
-    { name: "Postman", proficiency: 85, color: "from-blue-600 to-gray-800" },
+    { name: "Flask", proficiency: 81, color: "from-blue-600 to-gray-800" },
+    { name: "SQLite", proficiency: 78, color: "from-blue-600 to-gray-800" },
+    { name: "Git", proficiency: 82, color: "from-blue-600 to-gray-800" },
+    { name: "Postman", proficiency: 79, color: "from-blue-600 to-gray-800" },
     
     // Data Science & ML
-    { name: "Pandas", proficiency: 85, color: "from-blue-600 to-gray-800" },
-    { name: "NumPy", proficiency: 82, color: "from-blue-600 to-gray-800" },
-    { name: "Machine Learning", proficiency: 80, color: "from-blue-600 to-gray-800" },
-    { name: "Data Structures & Algorithms", proficiency: 85, color: "from-blue-600 to-gray-800" }
+    { name: "Pandas", proficiency: 80, color: "from-blue-600 to-gray-800" },
+    { name: "NumPy", proficiency: 77, color: "from-blue-600 to-gray-800" },
+    { name: "Machine Learning", proficiency: 75, color: "from-blue-600 to-gray-800" },
+    { name: "Data Structures & Algorithms", proficiency: 81, color: "from-blue-600 to-gray-800" }
   ];
 
   const categories = [

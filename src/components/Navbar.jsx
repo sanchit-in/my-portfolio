@@ -16,10 +16,13 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "#hero" },
+    { name: "Education", href: "#education" },
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Certificates", href: "#certificates" },
+    { name: "Achievements", href: "#achievements" },
     { name: "Contact", href: "#contact" }
   ];
 
@@ -41,23 +44,12 @@ export default function Navbar() {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3"
+            className="flex items-center"
           >
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-black dark:from-gray-200 dark:to-white rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white dark:text-black font-bold text-lg">SG</span>
-              </div>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-1 bg-gradient-to-r from-gray-600 to-gray-800 dark:from-gray-400 dark:to-gray-600 rounded-xl opacity-20 blur-sm"
-              ></motion.div>
-            </div>
             <div>
               <h1 className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Sanchit Gupta
               </h1>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Software Engineer</div>
             </div>
           </motion.div>
 

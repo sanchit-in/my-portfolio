@@ -5,21 +5,40 @@ import { FaGraduationCap, FaUniversity, FaSchool } from "react-icons/fa";
 export default function Education() {
   const education = [
     {
-      degree: "B.Tech – ITM Gwalior",
-      details: "Artificial Intelligence & Machine Learning (2022–2026)",
-      grade: "CGPA: 7.83/10",
-      icon: <FaGraduationCap />
+      institute: "Institute Of Technology and Management, Gwalior",
+      degree: "B.Tech",
+      period: "2022–2026",
+      specialization: "Artificial Intelligence and Machine Learning",
+      grade: "CGPA: 7.91/10",
+      icon: <FaGraduationCap />,
+      logo: "/images/itm.png"
     },
     {
-      degree: "Diplomas – IIT Madras",
-      details: "Programming & Data Science (2022–2025)",
-      grade: "CGPA: 7.15 (Programming), 8.08 (Data Science)",
-      icon: <FaUniversity />
+      institute: "Indian Institute of Technology, Madras",
+      degree: "Diploma in Programming",
+      period: "2022–2025",
+      specialization: "Majors: Data Science",
+      grade: "CGPA: 7.15/10",
+      icon: <FaUniversity />,
+      logo: "/images/iitm.png"
     },
     {
-      degree: "St. Mary Orthodox School",
-      details: "Intermediate | Matriculation",
-      icon: <FaSchool />
+      institute: "Indian Institute of Technology, Madras",
+      degree: "Diploma in Data Science",
+      period: "2022–2025",
+      specialization: "Majors: Data Science",
+      grade: "CGPA: 8.08/10",
+      icon: <FaUniversity />,
+      logo: "/images/iitm.png"
+    },
+    {
+      institute: "St. Mary Orthodox School, Kanpur",
+      degree: "Intermediate | Matriculation",
+      period: "",
+      specialization: "12th Standard: 91% | 10th Standard: 88%",
+      grade: "",
+      icon: <FaSchool />,
+      logo: "/images/school.png"
     },
   ];
 
@@ -61,7 +80,7 @@ export default function Education() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {education.map((edu, idx) => (
             <motion.div
               key={idx}
@@ -72,24 +91,45 @@ export default function Education() {
               className="group relative"
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-400/10 via-gray-400/10 to-white/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-gray-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <div className="text-white text-2xl">
-                      {edu.icon}
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-2xl transition-all duration-300 h-full">
+                <div className="flex items-start space-x-6 h-full">
+                  {/* Logo */}
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg overflow-hidden">
+                      <img 
+                        src={edu.logo} 
+                        alt={`${edu.institute} logo`}
+                        className="w-12 h-12 object-contain"
+                      />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {edu.degree}
-                  </h3>
-                  <p className="text-gray-300 mb-3 leading-relaxed">
-                    {edu.details}
-                  </p>
-                  {edu.grade && (
-                    <p className="text-blue-300 font-semibold text-sm">
-                      {edu.grade}
-                    </p>
-                  )}
+                  
+                  {/* Content */}
+                  <div className="flex-1 flex flex-col justify-between h-full">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {edu.institute}
+                      </h3>
+                      <div className="text-blue-300 font-semibold mb-2">
+                        {edu.degree}
+                      </div>
+                      {edu.period && (
+                        <div className="text-gray-400 text-sm mb-2">
+                          {edu.period}
+                        </div>
+                      )}
+                      {edu.specialization && (
+                        <div className="text-gray-300 mb-2 leading-relaxed">
+                          {edu.specialization}
+                        </div>
+                      )}
+                    </div>
+                    {edu.grade && (
+                      <div className="text-blue-300 font-semibold text-sm mt-auto">
+                        {edu.grade}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>

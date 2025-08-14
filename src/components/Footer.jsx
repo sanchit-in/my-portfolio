@@ -83,10 +83,13 @@ export default function Footer() {
               </div>
               <ul className="space-y-4">
                 {[
+                  { name: "Education", href: "#education" },
                   { name: "About", href: "#about" },
                   { name: "Experience", href: "#experience" },
                   { name: "Projects", href: "#projects" },
                   { name: "Skills", href: "#skills" },
+                  { name: "Certificates", href: "#certificates" },
+                  { name: "Achievements", href: "#achievements" },
                   { name: "Contact", href: "#contact" }
                 ].map((link, index) => (
                   <motion.li

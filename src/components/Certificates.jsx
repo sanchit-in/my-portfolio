@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaCertificate, FaExternalLinkAlt, FaDownload } from "react-icons/fa";
+import { FaCertificate, FaExternalLinkAlt, FaDownload, FaCloud, FaCode, FaBrain } from "react-icons/fa";
 
 export default function Certificates() {
   const handleDownload = (certificatePath, certificateTitle) => {
@@ -13,6 +13,19 @@ export default function Certificates() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const getCertificateIcon = (category) => {
+    switch (category) {
+      case "Cloud Computing":
+        return <FaCloud className="text-white text-3xl" />;
+      case "Programming":
+        return <FaCode className="text-white text-3xl" />;
+      case "Data Science":
+        return <FaBrain className="text-white text-3xl" />;
+      default:
+        return <FaCertificate className="text-white text-3xl" />;
+    }
   };
 
   const certificates = [
@@ -94,7 +107,7 @@ export default function Certificates() {
               <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-2xl transition-all duration-300">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-gray-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <FaCertificate className="text-white text-3xl" />
+                    {getCertificateIcon(cert.category)}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{cert.title}</h3>
                   <p className="text-blue-300 text-sm mb-2 font-medium">{cert.issuer}</p>
